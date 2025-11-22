@@ -1,0 +1,30 @@
+
+> survey-tool@0.1.0 lint
+> eslint
+
+
+D:\Projects\survey-tool\app\api\generate-survey\route.ts
+  63:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Projects\survey-tool\app\api\version\route.ts
+  8:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Projects\survey-tool\app\generate\page.tsx
+  18:87  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\Projects\survey-tool\app\result\page.tsx
+  6:21  warning  'Download' is defined but never used  @typescript-eslint/no-unused-vars
+  6:31  warning  'FileJson' is defined but never used  @typescript-eslint/no-unused-vars
+  6:41  warning  'FileText' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\Projects\survey-tool\components\InputForm.tsx
+  42:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Projects\survey-tool\lib\formatGoogleForms.ts
+  8:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Projects\survey-tool\lib\formatMarkdown.ts
+  9:42  error  Parsing error: Invalid character
+
+✖ 9 problems (6 errors, 3 warnings)
+
