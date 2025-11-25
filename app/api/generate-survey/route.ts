@@ -105,10 +105,11 @@ export async function POST(request: Request) {
 
                 // Save all questions to the database with section information
                 if (surveyRequestId) {
+                    const requestId = surveyRequestId; // Type narrowing for TypeScript
                     let globalOrderIndex = 0;
                     const questionsToInsert = sections.flatMap((section) =>
                         section.questions.map((q) => ({
-                            surveyRequestId,
+                            surveyRequestId: requestId,
                             sectionId: section.section_id,
                             questionId: q.id,
                             text: q.text,

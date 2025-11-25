@@ -193,17 +193,17 @@ function ResultContent() {
                     )}
 
                     <div className="mb-8 flex items-center justify-end">
-                    <div className="flex gap-3">
-                        <CopyButton
-                            text={markdown}
-                            label="Copy Markdown"
-                        />
-                        <CopyButton
-                            text={googleForms}
-                            label="Copy Google Forms JSON"
-                        />
+                        <div className="flex gap-3">
+                            <CopyButton
+                                text={markdown}
+                                label="Copy Markdown"
+                            />
+                            <CopyButton
+                                text={googleForms}
+                                label="Copy Google Forms JSON"
+                            />
+                        </div>
                     </div>
-                </div>
 
                 <div className="text-center mb-10">
                     <h1 className="text-3xl font-bold text-foreground">Your Generated Survey</h1>

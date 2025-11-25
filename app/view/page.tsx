@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import QuestionCard from '@/components/QuestionCard';
 import CopyButton from '@/components/CopyButton';
@@ -15,7 +14,7 @@ import { Label } from '@/components/ui/label';
 import { formatMarkdown } from '@/lib/formatMarkdown';
 import { formatGoogleForms } from '@/lib/formatGoogleForms';
 import { SurveySection } from '@/lib/generatePrompt';
-import { useSession, signIn } from '@/lib/auth-client';
+import { useSession } from '@/lib/auth-client';
 import { getSurveysFromLocalStorage, getSurveyFromLocalStorage, deleteSurveyFromLocalStorage } from '@/lib/localStorage';
 
 interface Survey {
@@ -38,7 +37,6 @@ interface SurveyRequest {
 }
 
 export default function ViewPage() {
-    const router = useRouter();
     const { data: session, isPending: sessionLoading } = useSession();
     const [surveys, setSurveys] = useState<Survey[]>([]);
     const [selectedSurveyId, setSelectedSurveyId] = useState<string>('');
@@ -362,8 +360,6 @@ export default function ViewPage() {
                                         if (!res.ok) {
                                             throw new Error('Failed to save survey');
                                         }
-
-                                        const data = await res.json();
                                         // Remove from localStorage and reload
                                         deleteSurveyFromLocalStorage(selectedSurveyId);
                                         // Reload surveys
