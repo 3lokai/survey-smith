@@ -59,7 +59,7 @@ export default function ViewPage() {
                 const localSurvey = getSurveyFromLocalStorage(surveyId);
                 if (localSurvey) {
                     setSections(localSurvey.sections);
-                    setSurveyRequest(localSurvey.surveyRequest);
+                    setSurveyRequest({ ...localSurvey.surveyRequest, id: localSurvey.id });
                     setLoadingSurvey(false);
                     return;
                 } else {
@@ -126,7 +126,7 @@ export default function ViewPage() {
                         const localSurvey = getSurveyFromLocalStorage(firstSurveyId);
                         if (localSurvey) {
                             setSections(localSurvey.sections);
-                            setSurveyRequest(localSurvey.surveyRequest);
+                            setSurveyRequest({ ...localSurvey.surveyRequest, id: localSurvey.id });
                         }
                     }
                     setLoading(false);

@@ -231,6 +231,7 @@ function ResultContent() {
                         );
                     })}
                 </div>
+                </div>
             </main>
             <Footer />
         </div>
